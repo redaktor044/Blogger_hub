@@ -72,3 +72,11 @@ Open a theme → Customize. Design controls brand, email, three colors, heading 
 Menu edits navigation labels/destinations, plus 404 copy. Project saves/loads validated JSON and can restore defaults. Undo/redo works for content, deletion and reset within the editing session. Each theme keeps one independent local project; cross-device cloud sync is not included. Image fields accept HTTP(S) URLs. Uploaded JSON is validated against the selected theme and limits before replacement.
 
 Exports include the customized theme.xml, individual HTML content, content-manifest.json, project.forma.json, instructions and linked standalone previews. Theme XML does not create Blogger posts: use the provided content files in Blogger’s post/page editor. Existing Blogger URLs can be entered to wire navigation; without a post URL the link searches its title. The editor does not connect to or publish directly to a Blogger account.
+
+## Twelve distinct site layouts
+
+Each theme now starts with a different composition: magazine (Studio), immersive travel (Roam), journal with sidebar (Savor), bento (Signal), fashion lookbook (Muse), newspaper (Margin), product catalog (Object), digital showcase (Pixels), horizontal rental fleet (Drive), numbered expeditions (Basecamp), agency case studies (Atelier), and photographic portfolio (Frame).
+
+Customize → Design → Website layout switches any project between all twelve structures without discarding authored content. The choice persists in project JSON and applies to HTML previews and Blogger XML, including native post listings. Existing projects migrate to their theme’s default layout. Gallery thumbnails render the actual layouts. Desktop preview uses a scaled 1200px viewport; Mobile uses a separate narrow viewport.
+
+`dist/layouts.js` owns layout metadata, structural renderers and responsive CSS. `dist/layout-gallery.css` styles actual preview thumbnails. `tests/layouts.test.mjs` checks distinct defaults, migration, layout exports and native archive visibility.

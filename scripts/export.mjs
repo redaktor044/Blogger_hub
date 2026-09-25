@@ -1,7 +1,7 @@
 import {mkdir,writeFile} from 'node:fs/promises';
 import path from 'node:path';
 import {themes} from '../dist/catalog.js';
-import {packageFiles} from '../dist/engine.js';
+import {packageFiles} from '../dist/studio-engine.js';
 import {zipBytes} from '../dist/zip.js';
 const target=path.resolve(process.argv[2]||'exports');
 await mkdir(target,{recursive:true});
