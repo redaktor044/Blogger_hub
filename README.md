@@ -40,7 +40,7 @@ Back up the existing Blogger theme. Install the XML through Theme → Edit HTML 
 
 The generator handles posts, static pages, listing pagination, comments and 404 views. XML structural validation is not a Blogger compiler or an actual installation test. **Import/save and runtime behavior on a real test blog remain to be verified.** The MVP should not be sold as a certified Blogger theme package before that acceptance test. Product/rental offers use email inquiries; there is no checkout or availability calendar.
 
-Customization applies to the current session and selected theme; favorites, language and dashboard appearance persist locally on the device. Export a package to keep a customized theme. Invalid emails fall back to the demo address; use a valid contact address before publication. Demo images are remote Unsplash assets, attributed in `dist/assets.js` and package instructions. Google Fonts are optional remote UI fonts with system fallbacks. No private user data, credentials, analytics or backend services are included in the repository.
+Customization and authored content autosave separately for each theme in localStorage. Favorites, language and dashboard appearance also persist locally. Download a project JSON backup to move or recover your work. Storage quota failures are surfaced in the editor. Invalid emails fall back to the demo address; use a valid contact address before publication. Demo images are remote Unsplash assets, attributed in `dist/assets.js` and package instructions. Google Fonts are optional remote UI fonts with system fallbacks. No private user data, credentials, analytics or backend services are included in the repository.
 
 ## Structure
 
@@ -64,3 +64,11 @@ Real Blogger acceptance tests → separate premium theme metadata and licensing 
 - [Blogger layout data](https://support.google.com/blogger/answer/47270)
 - [Theme editing](https://support.google.com/blogger/answer/176245)
 - [Creating pages](https://support.google.com/blogger/answer/165955)
+
+## Forma Studio editor
+
+Open a theme → Customize. Design controls brand, email, three colors, heading font, corner radius, width and text size. Homepage edits hero copy/image/button and adds reorderable text, image and call-to-action sections. Content creates, duplicates, reorders and deletes articles, offers and pages with title, excerpt, body, image URL/alt, author/category, price, slug and publication state. A toolbar supports bold, italic, headings, lists and quotes using a safe text format; raw HTML is escaped. Draft cards are excluded from the homepage but retained in the package.
+
+Menu edits navigation labels/destinations, plus 404 copy. Project saves/loads validated JSON and can restore defaults. Undo/redo works for content, deletion and reset within the editing session. Each theme keeps one independent local project; cross-device cloud sync is not included. Image fields accept HTTP(S) URLs. Uploaded JSON is validated against the selected theme and limits before replacement.
+
+Exports include the customized theme.xml, individual HTML content, content-manifest.json, project.forma.json, instructions and linked standalone previews. Theme XML does not create Blogger posts: use the provided content files in Blogger’s post/page editor. Existing Blogger URLs can be entered to wire navigation; without a post URL the link searches its title. The editor does not connect to or publish directly to a Blogger account.
